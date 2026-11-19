@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NutriVida — Dashboard de Nutrição & Saúde</title>
+  <meta name="description" content="Acompanhamento nutricional, controle calórico e reeducação alimentar para combate ao sobrepeso e obesidade.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGAÇÃO COM OS BRASÕES DA ESCOLA E DO ESTADO -->
+  <header class="app-header">
+    <div class="nav-container">
+
+      <!-- CANTO SUPERIOR ESQUERDO: BRASÃO DO PARANÁ -->
+      <img src="img/brasao-parana.webp" alt="Brasão do Estado do Paraná" class="img-brasao brasao-esq">
+
+      <!-- CENTRO: MARCA + NAVEGAÇÃO -->
+      <div class="nav-center">
+        <div class="brand">
+          <span class="icon">🥗</span>
+          <span class="title">NutriVida</span>
+          <span class="badge-tag">ODS 3 - Saúde</span>
+        </div>
+        <nav class="nav-links">
+          <a href="#historia">Nossa História</a>
+          <a href="#problema">O Projeto</a>
+          <a href="#dashboard">Dashboard</a>
+          <a href="#mural">Mural</a>
+        </nav>
+      </div>
+
+      <!-- CANTO SUPERIOR DIREITO: EMBLEMA CCMPR -->
+      <img src="img/ccm.jpg" alt="Emblema do Colégio Cívico-Militar do Paraná" class="img-brasao brasao-dir">
+
+    </div>
+  </header>
+
+  <!-- BANNER COMPACTO DE APRESENTAÇÃO -->
+  <section class="hero-banner">
+    <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" alt="Alimentação saudável e colorida" class="hero-bg">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Transforme sua saúde com planejamento alimentar</h1>
+        <p>Um espaço comunitário para organizar dietas, controlar metas calóricas e combater a obesidade de forma prática e consciente.</p>
+        <a href="#cadastrar" class="btn-hero">Começar Planejamento</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-wrapper">
+
+    <!-- SEÇÃO DE STORYTELLING (A HISTÓRIA POR TRÁS DO PROJETO) -->
+    <section id="historia" class="info-section explicacao-box">
+      <div class="info-header">
+        <h2>📖 Nossa História: Da Rotina Corrida ao Planejamento</h2>
+        <p>
+          Imagine a rotina da <strong>Ana</strong>, uma estudante como nós, ou a de seus pais, que trabalham fora o dia todo. Com a correria diária, a falta de tempo e o cansaço, a hora de comer acabava ficando em segundo plano. Por ser mais rápido e prático, o prato principal da maioria das pessoas passa a ser o fast-food e os alimentos ultraprocessados.
+        </p>
+        <p>
+          No início, parece inofensivo. Mas com o tempo, o cansaço aumenta e a balança começa a refletir os impactos da má alimentação. A obesidade e o sobrepeso afetam mais de metade da população, trazendo riscos sérios de hipertensão e diabetes. Percebemos que o maior desafio não é a falta de vontade de mudar, mas sim a <strong>falta de organização e acompanhamento no dia a dia</strong>.
+        </p>
+        <p>
+          Foi olhando para essa realidade em nossas famílias e comunidade escolar que nasceu o <strong>NutriVida</strong>[cite: 1, 4]. Entendemos que a mudança não começa no prato, mas no planejamento! Criamos esta plataforma para ajudar pessoas como a Ana a planejar suas refeições, monitorar calorias, praticar a reeducação alimentar e compartilhar metas em grupo, provando que a tecnologia pode transformar vidas e combater a obesidade[cite: 1, 4].
+        </p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE O PROBLEMA E OBJETIVO COM FOTOS DE PESSOAS -->
+    <section id="problema" class="info-section">
+      <div class="info-header">
+        <h2>O Problema da Obesidade & Nossa Solução</h2>
+        <p>A obesidade é um desafio de saúde pública global. O planejamento diário das refeições e a reeducação alimentar em grupo fortalecem a constância e promovem hábitos mais saudáveis.</p>
+      </div>
+
+      <div class="grid-problema">
+        <!-- FOTO 1: Pessoa comendo refeição saudável -->
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" alt="Pessoa sorrindo enquanto come uma refeição saudável com salada">
+          <div class="card-body">
+            <h3>Reeducação Alimentar Consciente</h3>
+            <p>Escolher refeições coloridas e ricas em nutrientes no dia a dia é o primeiro passo para o emagrecimento sustentável.</p>
+          </div>
+        </div>
+
+        <!-- FOTO 2: Pessoas compartilhando refeição saudável -->
+        <div class="info-card">
+          <img src="https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=500&q=80" alt="Grupo de pessoas compartilhando e desfrutando de uma refeição saudável juntas">
+          <div class="card-body">
+            <h3>Apoio Comunitário</h3>
+            <p>Compartilhar metas e refeições em comunidade ajuda a manter a motivação e o compromisso com a saúde física.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD PRINCIPAL EM DUAS COLUNAS -->
+    <section id="dashboard" class="dashboard-grid">
+
+      <!-- COLUNA DA ESQUERDA: PAINEL DE IMPACTO + FORMULÁRIO -->
+      <div class="col-sidebar">
+
+        <!-- PAINEL DE NÚMEROS / IMPACTO -->
+        <div class="dash-card impact-box">
+          <h3>Impacto do Projeto</h3>
+          <p class="sub-text">Indicador: Refeições planejadas e energia monitorada (ODS 3 ONU).</p>
+          <div class="painel" id="painel"></div>
+        </div>
+
+        <!-- FORMULÁRIO DE CADASTRO -->
+        <div id="cadastrar" class="dash-card form-box">
+          <h3>Cadastrar Plano Alimentar</h3>
+          <p class="sub-text">Preencha os dados da sua refeição para adicionar ao mural.</p>
+
+          <form id="formulario" class="form-grid">
+            <div class="field">
+              <label for="tituloDaAcao">Nome / Título da Refeição</label>
+              <input type="text" id="tituloDaAcao" placeholder="Ex: Omelete Proteica com Salada" maxlength="80" required>
+            </div>
+
+            <div class="field-group">
+              <div class="field">
+                <label for="tipoRefeicao">Tipo de Refeição</label>
+                <select id="tipoRefeicao" required>
+                  <option value="">Selecione...</option>
+                  <option>Café da Manhã</option>
+                  <option>Almoço</option>
+                  <option>Lanche da Tarde</option>
+                  <option>Jantar</option>
+                  <option>Ceia / Pós-Treino</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="objetivo">Objetivo</label>
+                <select id="objetivo" required>
+                  <option value="">Selecione...</option>
+                  <option>Emagrecimento</option>
+                  <option>Reeducação Alimentar</option>
+                  <option>Manutenção da Saúde</option>
+                  <option>Ganho de Massa</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <div class="field">
+                <label for="calorias">Calorias (kcal)</label>
+                <input type="number" id="calorias" placeholder="Ex: 380" min="0" required>
+              </div>
+
+              <div class="field">
+                <label for="local">Usuário / Responsável</label>
+                <input type="text" id="local" placeholder="Ex: Ana Silva" maxlength="80" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="oQueFoiFeito">Ingredientes & Modo de Preparo</label>
+              <textarea id="oQueFoiFeito" rows="3" placeholder="Ex: 2 ovos, tomate, espinafre e 1 xícara de chá verde." maxlength="300" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Salvar Refeição</button>
+            <p id="aviso" class="aviso-status" role="status"></p>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- COLUNA DA DIREITA: MURAL DE REFEIÇÕES COM FERRAMENTAS -->
+      <div id="mural" class="col-content">
+
+        <div class="mural-header-box">
+          <div class="mural-title">
+            <h2>Mural de Planos Alimentares</h2>
+            <p>Explore refeições e ideias saudáveis compartilhadas na comunidade.</p>
+          </div>
+
+          <!-- CONTROLES DE BUSCA, FILTRO E BACKUP -->
+          <div class="toolbar">
+            <div class="tool-item search-tool">
+              <input type="text" id="busca" placeholder="🔎 Buscar por ingrediente ou nome...">
+            </div>
+
+            <div class="tool-item filter-tool">
+              <select id="filtro">
+                <option value="todas">Todas as categorias</option>
+                <option>Café da Manhã</option>
+                <option>Almoço</option>
+                <option>Lanche da Tarde</option>
+                <option>Jantar</option>
+                <option>Ceia / Pós-Treino</option>
+              </select>
+            </div>
+
+            <div class="tool-item actions-tool">
+              <button type="button" id="exportar" class="btn-action">💾 Exportar</button>
+              <label for="importar" class="btn-action">📂 Importar</label>
+              <input type="file" id="importar" accept="application/json" hidden>
+              <button type="button" id="limpar" class="btn-action danger">🗑️ Apagar Tudo</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- GRID DE CARDS DO MURAL -->
+        <div id="lista" class="cards-grid"></div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ MODERNO -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <p><b>NutriVida</b> — Projeto Escolar de Incentivo à Nutrição Saudável e Combate à Obesidade</p>
+      <p class="sub">Colégio Cívico-Militar do Paraná | Desenvolvido em alinhamento com o ODS 3 da ONU.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
